@@ -20,8 +20,8 @@ A Discord bot that contains all of the alts mathy has used and bans them from th
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/discord-ban-bot.git
-    cd discord-ban-bot
+    git clone https://github.com/zdashero/demathinator.git
+    cd demathinator
     ```
 
 2. **Install dependencies:**
