@@ -61,6 +61,7 @@ async def filterban(interaction: discord.Interaction):
                 banned = await isBanned(user_id)
                 if banned:
                     continue
+
                 user = await bot.fetch_user(user_id)
                 if user:
                     try:
