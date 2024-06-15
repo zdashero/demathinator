@@ -1,13 +1,13 @@
 # user filter Bot
 
-This Discord bot is designed to serve as a preemptive user filter by banning users listed in an filter database before they have a chance to join your server. The database is updated in real-time. If you want to add someone to the filter list, please contact `zdashero` on Discord.
+This Discord bot is designed to serve as a preemptive user filter by banning unsavory users listed in an filter database before they have a chance to join your server. The database is updated in real-time. If you want to add someone to the filter list, please contact `zdashero` on Discord. (check bottom for filter coverage)
 
 ## Repo name
 This bot was made in the start to ban a user named mathy and his alts so I named it the demathinator, I kept it the repo name because it is funny
 
 ## Features
 
-- Automatically bans users based on an up-to-date filter database.
+- Bans users based on an up-to-date filter database.
 - Restricts the `/filterban` command to specific user IDs.
 - Provides a `/count` command to display the number of users in the database.
 
@@ -49,3 +49,14 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 
 - **/filterban**: Bans users listed in the filter database. This command is restricted to user IDs specified in `config.json`.
 - **/count**: Displays the number of users in the filter database.
+
+  ### Filter coverage
+  this is a list of every type of user the database filters 
+
+- homophobia
+- transphoba
+- racism
+- witch hunting
+- doxxing
+- pedophilia
+any more ideas of what to cover contact me
