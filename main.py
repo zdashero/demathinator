@@ -32,13 +32,12 @@ async def download_database():
 
         LAST_COMMIT = commit_sha
 
-async def isBanned(member: int) -> bool: 
+async def isBanned(member: discord.Member, guild: discord.Guild) -> bool:
     try:
-        await bot.fetch_user(member)
+        banData = await guild.fetch_ban(member)
+        return True
     except discord.NotFound:
         return False
-    finally:
-        return True
 
 @bot.event
 async def on_ready():
@@ -58,11 +57,11 @@ async def filterban(interaction: discord.Interaction):
             rows = await cursor.fetchall()
             for row in rows:
                 user_id, reason = row
-                banned = await isBanned(user_id)
+                user = await bot.fetch_user(user_id)
+                banned = await isBanned(user, interaction.guild)
                 if banned:
                     continue
 
-                user = await bot.fetch_user(user_id)
                 if user:
                     try:
                         await interaction.guild.ban(user, reason=reason)
@@ -74,7 +73,7 @@ async def filterban(interaction: discord.Interaction):
                 else:
                     await interaction.followup.send(f"User with ID {user_id} not found")
     
-    await interaction.edit_original_response(content="Complete.")
+    await interaction.followup.send("Complete.")
 
 @bot.tree.command(name="count", description="Count the number of users in the filter database")
 async def count(interaction: discord.Interaction):
