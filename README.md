@@ -54,7 +54,7 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 this is a list of every type of user the database filters 
 
 - homophobia
-- transphoba
+- transphobia
 - racism
 - witch hunting
 - doxxing
