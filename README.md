@@ -1,58 +1,51 @@
-# Mathy Ban Bot
+# user filter Bot
 
-A Discord bot that contains all of the alts mathy has used and bans them from the server with a single command.
+This Discord bot is designed to serve as a preemptive user filter by banning users listed in an filter database before they have a chance to join your server. The database is updated in real-time. If you want to add someone to the filter list, please contact `zdashero` on Discord.
+
+## Repo name
+This bot was made in the start to ban a user named mathy and his alts so I named it the demathinator, I kept it the repo name because it is funny
 
 ## Features
 
-- Add user IDs to a ban list.
-- Ban all users in the ban list with a single command.
-- Stores the bot token in a `config.json` file for security.
-- Uses SQLite for lightweight database management.
+- Automatically bans users based on an up-to-date filter database.
+- Restricts the `/filterban` command to specific user IDs.
+- Provides a `/count` command to display the number of users in the database.
 
 ## Prerequisites
 
+- Python 3.8 or higher
 - Discord bot token
-- `discord.py` library
-- `aiosqlite` library
+- List of user IDs that are allowed to use the `/filterban` command
 
 ## Installation
 
-1. **Clone the repository:**
+1. Clone the repository or download the `main.py` and `config.json` files.
 
-    ```sh
-    git clone https://github.com/zdashero/demathinator.git
-    cd demathinator
+2. Install the required libraries:
+    ```bash
+    pip install discord.py aiosqlite requests
     ```
 
-2. **Install dependencies:**
-
-    ```sh
-    pip install discord.py aiosqlite
-    ```
-
-3. **Create `config.json` file:**
-
-    Create a `config.json` file in the root directory of the project and add your bot token:
-
+3. Create a `config.json` file in the same directory as `main.py` with the following content:
     ```json
     {
-        "token": "YOUR_BOT_TOKEN_HERE"
+        "token": "YOUR_BOT_TOKEN",
+        "allowed_user_ids": [123456789012345678, 234567890123456789]
     }
     ```
+    Replace `"YOUR_BOT_TOKEN"` with your actual bot token and update the `allowed_user_ids` array with the user IDs that should have access to the `/filterban` command.
 
 ## Usage
 
-1. **Run the bot:**
+### Running the Bot
 
-    ```sh
-    python bot.py
+1. Save the `config.json` and `main.py` files.
+2. Run the bot using:
+    ```bash
+    python main.py
     ```
 
-2. **Commands:**
+### Commands
 
-    - `!addid ID` - Add a user ID to the ban list.
-    - `!ban` - Ban all users in the ban list from the server.
-
-## Permissions
-
-Ensure the bot has the necessary permissions to ban members in your Discord server. This can be managed through the Discord Developer Portal and server settings. (needs all intents)
+- **/filterban**: Bans users listed in the filter database. This command is restricted to user IDs specified in `config.json`.
+- **/count**: Displays the number of users in the filter database.
