@@ -58,11 +58,11 @@ async def filterban(interaction: discord.Interaction):
             for row in rows:
                 user_id, reason = row
                 user = await bot.fetch_user(user_id)
-                banned = await isBanned(user, interaction.guild)
-                if banned:
-                    continue
-
                 if user:
+                    banned = await isBanned(user, interaction.guild)
+                    if banned:
+                        continue
+                    
                     try:
                         await interaction.guild.ban(user, reason=reason)
                         await interaction.followup.send(f"Banned {user.mention} ({user.id}) for: {reason}")
