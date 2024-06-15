@@ -23,7 +23,7 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 
 2. Install the required libraries:
     ```bash
-    pip install discord.py aiosqlite requests
+    pip install -r requirements.txt
     ```
 
 3. Create a `config.json` file in the same directory as `main.py` with the following content:
