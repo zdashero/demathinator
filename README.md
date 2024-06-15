@@ -50,8 +50,8 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 - **/filterban**: Bans users listed in the filter database. This command is restricted to user IDs specified in `config.json`.
 - **/count**: Displays the number of users in the filter database.
 
-  ### Filter coverage
-  this is a list of every type of user the database filters 
+## Filter coverage
+this is a list of every type of user the database filters 
 
 - homophobia
 - transphoba
@@ -59,4 +59,5 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 - witch hunting
 - doxxing
 - pedophilia
+
 any more ideas of what to cover contact me
