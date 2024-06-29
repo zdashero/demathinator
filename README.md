@@ -61,5 +61,6 @@ this is a list of every type of user the database filters
 - pedophilia
 - malware spreading
 - nazism
+- spreading gore
 
 any more ideas of what to cover contact me
