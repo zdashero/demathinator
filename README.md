@@ -53,11 +53,13 @@ This bot was made in the start to ban a user named mathy and his alts so I named
 ## Filter coverage
 this is a list of every type of user the database filters 
 
-- homophobia
+- extreme homophobia
 - transphobia
-- racism
-- witch hunting
+- extreme racism
+- witch hunting innocent people/groups
 - doxxing
 - pedophilia
+- malware spreading
+- nazism
 
 any more ideas of what to cover contact me
